@@ -39,8 +39,10 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
-		UsbCamera usbCamera = new UsbCamera("USB Camera 0", 0);
-		LogicCamera.getInstance().startAutomaticCapture(usbCamera);
+		UsbCamera usbCamera = new UsbCamera("cam0", 0);
+		LogicCamera.getInstance();
+		LogicCamera.startAutomaticCapture(usbCamera);
+		
 		//LogicCamera.getVideo();
 		oi = new OI();
 		driveSubsystem = new DriveTrain_Subsystem();
